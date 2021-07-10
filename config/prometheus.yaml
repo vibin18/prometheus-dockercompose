@@ -62,7 +62,7 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 127.0.0.1:9115  # The blackbox exporter's real hostname:port.
+        replacement: blackbox_exporter:9115  # The blackbox exporter's real hostname:port.
 
   - job_name: 'blackbox_icmp'
     metrics_path: /probe
@@ -78,4 +78,4 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 127.0.0.1:9115  # This is your blackbox exporter.
+        replacement: blackbox_exporter:9115  # This is your blackbox exporter.
