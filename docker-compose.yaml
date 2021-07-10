@@ -65,7 +65,7 @@ services:
     dns: 8.8.8.8
     restart: always
     volumes:
-      - '/prometheus/blackbox/config:/config'
+      - '/prometheus/config:/config'
     command: -config.file=/config/blackbox.yaml
 
   # alertmanager:
