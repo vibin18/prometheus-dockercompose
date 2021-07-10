@@ -13,7 +13,7 @@ services:
   prometheus:
     image: prom/prometheus:v2.28.1
     volumes:
-      - /prometheus/data:/etc/prometheus/
+      - /prometheus/data:/prometheus/
       - /prometheus/config:/etc/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yaml'
